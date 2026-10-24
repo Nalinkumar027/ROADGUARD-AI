@@ -2,6 +2,10 @@
 % Educational prototype only. Not for real-vehicle control.
 clear; clc; close all;
 
+% Add project subfolders so MATLAB can locate planning and prediction files.
+projectRoot = fileparts(mfilename('fullpath'));
+addpath(genpath(projectRoot));
+
 % Grid convention: 0 = free cell, 1 = blocked cell.
 gridSize = [30, 40];
 occupancy = zeros(gridSize);
